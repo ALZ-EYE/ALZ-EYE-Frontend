@@ -20,7 +20,7 @@
         
         body {
             font-family: 'Tajawal', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            background: linear-gradient(135deg, f5f7fa 0%, #e4e7eb 100%);
             color: #333;
             min-height: 100vh;
         }
@@ -33,7 +33,7 @@
         .logo {
             font-weight: 700;
             font-size: 1.8rem;
-            color: white;
+            color: rgb(255, 255, 255);
         }
         
         .logo span {
@@ -41,7 +41,7 @@
         }
         
         .hero {
-            background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+            background: url('https://i.imgur.com/UlK6CsL.jpeg') no-repeat center center;
             background-size: cover;
             padding: 120px 0;
             position: relative;
@@ -59,7 +59,7 @@
         
         .hero-content {
             position: relative;
-            color: white;
+            color: rgb(255, 255, 255);
         }
         
         .btn-primary {
@@ -84,7 +84,7 @@
             position: relative;
             margin-bottom: 50px;
             font-weight: 700;
-            color: var(--secondary);
+            color: var(--light);
         }
         
         .section-title::after {
@@ -258,9 +258,10 @@
         .tab-content {
             padding: 20px 0;
         }
+
     </style>
 </head>
-<body>
+<html>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand logo" href="#home">
@@ -284,7 +285,6 @@
                         <a class="nav-link" href="#contact" data-page="contact-page">اتصل بنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light mx-2" href="#login" data-page="login-page">تسجيل الدخول</a>
                     </li>
                 </ul>
             </div>
@@ -401,62 +401,9 @@
     <section id="diagnosis-page" class="page">
         <div class="section">
             <div class="container">
-                <h2 class="section-title text-center mb-5">تشخيص الزهايمر</h2>
+                <h2 class=".hero::before text-center mb-5">تشخيص الزهايمر</h2>
                 
-                <div class="login-box" id="login-section">
-                    <ul class="nav nav-tabs nav-justified mb-4" id="authTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">تسجيل الدخول</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">إنشاء حساب</button>
-                        </li>
-                    </ul>
-                    
-                    <div class="tab-content" id="authTabsContent">
-                        <div class="tab-pane fade show active" id="login" role="tabpanel">
-                            <form id="login-form">
-                                <div class="mb-3">
-                                    <label for="login-email" class="form-label">البريد الإلكتروني</label>
-                                    <input type="email" class="form-control" id="login-email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="login-password" class="form-label">كلمة المرور</label>
-                                    <input type="password" class="form-control" id="login-password" required>
-                                </div>
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
-                                </div>
-                            </form>
-                        </div>
-                        
-                        <div class="tab-pane fade" id="register" role="tabpanel">
-                            <form id="register-form">
-                                <div class="mb-3">
-                                    <label for="register-name" class="form-label">الاسم الكامل</label>
-                                    <input type="text" class="form-control" id="register-name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="register-email" class="form-label">البريد الإلكتروني</label>
-                                    <input type="email" class="form-control" id="register-email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="register-password" class="form-label">كلمة المرور</label>
-                                    <input type="password" class="form-control" id="register-password" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="register-confirm" class="form-label">تأكيد كلمة المرور</label>
-                                    <input type="password" class="form-control" id="register-confirm" required>
-                                </div>
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary">إنشاء حساب</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="diagnosis-form" style="display: none;">
+                <div id="diagnosis-form">
                     <div class="card">
                         <div class="card-header bg-primary text-white">
                             <h4 class="mb-0">معلومات المريض</h4>
@@ -518,7 +465,7 @@
                     <div class="result-card">
                         <h3 class="text-center mb-4">نتائج التحليل</h3>
                         <div class="text-center mb-4">
-                            <h5>المرضى: <span id="patient-name">محمد أحمد</span></h5>
+                            <h5>المريض(ة): <span id="patient-name">محمد أحمد</span></h5>
                             <p>معرف الفحص: <span id="scan-id">I40857</span></p>
                         </div>
                         
@@ -555,7 +502,6 @@
                         
                         <div class="d-grid mt-5">
                             <button class="btn btn-primary" id="download-report">
-                                <i class="fas fa-download me-2"></i> تحميل التقرير الكامل
                             </button>
                         </div>
                     </div>
@@ -567,7 +513,7 @@
     <section id="about-page" class="page">
         <div class="section">
             <div class="container">
-                <h2 class="section-title text-center mb-5">عن مشروع ALZ-EYE</h2>
+                <h2 class=".hero::before text-center mb-5">عن مشروع ALZ-EYE</h2>
                 
                 <div class="row">
                     <div class="col-lg-6 mb-5">
@@ -648,7 +594,7 @@
     <section id="contact-page" class="page">
         <div class="section">
             <div class="container">
-                <h2 class="section-title text-center mb-5">اتصل بنا</h2>
+                <h2 class=".hero::before text-center mb-5">اتصل بنا</h2>
                 
                 <div class="row">
                     <div class="col-lg-6 mb-5">
@@ -671,7 +617,7 @@
                                     </div>
                                     <div class="ms-3">
                                         <h5 class="mb-0">الهاتف</h5>
-                                        <p class="mb-0">غير متوفر في الوقت الحالي</p>
+                                        <p class="mb-0">غير متوفر حاليا</p>
                                     </div>
                                 </div>
                                 
@@ -681,7 +627,8 @@
                                     </div>
                                     <div class="ms-3">
                                         <h5 class="mb-0">العنوان</h5>
-                                        <p class="mb-0">الجلفة, الجزائر</p>
+                                        <p class="mb-0">الجلفة ,الجزائر</p>
+                                        </p>
                                     </div>
                                 </div>
                                 
@@ -801,18 +748,6 @@
             });
         });
         
-        document.getElementById('login-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('login-section').style.display = 'none';
-            document.getElementById('diagnosis-form').style.display = 'block';
-        });
-        
-        document.getElementById('register-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('login-section').style.display = 'none';
-            document.getElementById('diagnosis-form').style.display = 'block';
-        });
-        
         const uploadArea = document.getElementById('upload-area');
         const fileInput = document.getElementById('mri-file');
         const fileName = document.getElementById('file-name');
@@ -896,6 +831,48 @@
         document.getElementById('download-report').addEventListener('click', function() {
             alert('سيبدأ تحميل التقرير الكامل للنتائج...');
         });
+        </script>
     </script>
+<script src="translations.js"></script>
+<script>
+  const currentLang = localStorage.getItem("lang") || "ar";
+
+  function translatePage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    document.querySelectorAll("[data-translate]").forEach(el => {
+      const key = el.getAttribute("data-translate");
+      if (t[key]) {
+        if (el.placeholder !== undefined) {
+          el.placeholder = t[key];
+        } else {
+          el.textContent = t[key];
+        }
+      }
+    });
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+    const switcher = document.getElementById("language-switcher-container");
+    if (lang === "ar") {
+      switcher.style.insetInlineStart = "15px";
+      switcher.style.insetInlineEnd = "";
+    } else {
+      switcher.style.insetInlineEnd = "15px";
+      switcher.style.insetInlineStart = "";
+    }
+  }
+
+  document.getElementById("lang-switch").addEventListener("change", function () {
+    const selectedLang = this.value;
+    localStorage.setItem("lang", selectedLang);
+    translatePage(selectedLang);
+  });
+
+  translatePage(currentLang);
+  document.getElementById("lang-switch").value = currentLang;
+</script>
 </body>
 </html>
